@@ -1,0 +1,4 @@
+message SensorData {
+    required float _co2 = 1;
+    optional int32 _co = 2;
+}
