@@ -6,7 +6,8 @@
 const char* ssid = "Hehe";
 const char* password = "apahayoo";
 WiFiClient espClient;
-WiFiStatus wifiStatus;
+// WiFiStatus wifiStatus;
+wl_status_t wifiStatus;
 
 // mqtt 
 //const char* mqtt_server = "192.168.1.144";
@@ -17,8 +18,8 @@ String message = "";
 
 void setup() 
 {
-  Serial.begin(57600);
-  Serial1.begin(57600); //lora
+  Serial.begin(57600);  //usb serial
+  Serial1.begin(9600); //lora
   
   // connect to wifi
   wifiStatus = WiFi.begin(ssid, password);
