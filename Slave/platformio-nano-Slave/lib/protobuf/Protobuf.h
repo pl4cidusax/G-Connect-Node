@@ -18,6 +18,7 @@ class Protobuf{
         pb_ostream_t oStream;
         pb_istream_t iStream;
 };
+
 // extern Protobuf proto;
 Protobuf::Protobuf(){
     _sensorData = SensorData_init_zero;

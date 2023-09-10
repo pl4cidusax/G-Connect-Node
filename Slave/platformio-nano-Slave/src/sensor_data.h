@@ -1,13 +1,27 @@
 #pragma once
 
 #include <Arduino.h>
-// #include <String>
+
+struct sensorData
+{
+    float humidity;
+    float wind_speed;
+    float temperature;
+    float rain_rate;
+    float soil_moisture;
+    float water_level;
+    // bool isDry;
+    float longitude, latitude;
+    float roll;
+    float pitch;
+};
 
 float _wind_speed;
 float _temperature;
 float _humidity;
 float _rainfall_rate;
-int _soil_moisture;
+float _rain_rate;
+float _soil_moisture;
 float water_level;
 bool isDry;
 double longitude, latitude;

@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+message SensorReading {
+    required float humidity = 1;
+    required float wind_speed = 2;
+    required float temperature = 3;
+    required float rain_rate = 4;
+    required float soil_moisture = 5;
+    required float water_level = 6;
+    required float longitude = 7;
+    required float latitude = 8;
+    required float roll = 9;
+    required float pitch = 10;
+}

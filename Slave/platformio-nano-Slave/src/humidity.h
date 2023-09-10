@@ -21,14 +21,15 @@ void dht_init() {
 }
 
 void dht_update() {
-  currentMillis = millis(); 
-  if (currentMillis - startMillis >= period)
-  {
+  // currentMillis = millis(); 
+  // if (currentMillis - startMillis >= period)
+  // {
     // read humidity
     _humidity  = dht_sensor.readHumidity();
+    // _sensordata.humidity = _humidity;
     // read temperature in Celsius
     _temperature = dht_sensor.readTemperature();
-
+    // _sensordata.temperature = _temperature;
     // check whether the reading is successful or not
     // if ( isnan(tempC) || isnan(humi)) {
     //   Serial.println("Failed to read from DHT sensor!");
@@ -43,9 +44,9 @@ void dht_update() {
     //   Serial.print("Temperature: ");
     //   Serial.print(tempC);
     //   Serial.print("°C  ~  ");
-      startMillis = currentMillis;
+      // startMillis = currentMillis;
     //  }   
-  }
+  // }
 }
 
 /*use scheduling
