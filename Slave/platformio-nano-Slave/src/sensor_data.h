@@ -1,19 +1,41 @@
 #pragma once
 
 #include <Arduino.h>
-// #include <String>
+
+struct sensorData
+{
+    float humidity;
+    float wind_speed;
+    float temperature;
+    float rain_rate;
+    float soil_moisture;
+    float water_level;
+    // bool isDry;
+    float longitude, latitude;
+    float roll;
+    float pitch;
+};
 
 float _wind_speed;
 float _temperature;
 float _humidity;
 float _rainfall_rate;
-int _soil_moisture;
+float _rain_rate;
+float _soil_moisture;
+float water_level;
 bool isDry;
 double longitude, latitude;
 int16_t _accel_x;
 int16_t _accel_y;
 int16_t _accel_z;
 
+// battery status
+uint8_t battery_pin = A3;
+float r1 = 10000.0; // ganti dengan r (ohm) sebenarnya
+float r2 = 10000.0;// ganti dengan r (ohm) sebenarnya
+float v_ref = 5.0;
+float v_low = 12.0;
+float v_high = 12.8;
 
 // //treshold
 // float _wind_speed_th = 32.0;

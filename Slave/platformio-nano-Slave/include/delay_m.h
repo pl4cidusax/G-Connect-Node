@@ -5,6 +5,7 @@
 #endif
 // class
 uint32_t prevMillis = 0;
+uint32_t prevMicros = 0;
 
 void DelayMillis(uint32_t _delay)
 {
@@ -12,4 +13,12 @@ void DelayMillis(uint32_t _delay)
     prevMillis = currentMillis;
     while (millis() - prevMillis < _delay){}
 }
+
+void DelayMicros(uint32_t _delay)
+{
+    uint32_t currentMillis = micros();
+    prevMillis = currentMillis;
+    while (micros() - prevMillis < _delay){}
+}
+
 #endif
